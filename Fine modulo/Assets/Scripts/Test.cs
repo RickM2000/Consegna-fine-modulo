@@ -8,10 +8,12 @@ public class Test : MonoBehaviour
     [SerializeField] int day = 9;
     float myFloat = 4.5f;
     bool myBool = true;
-    string myString = "asfnkasnc";
+P   string myString = "asfnkasnc";
+
 
 
     public LayerMask mask;
+
 
     // Start is called before the first frame update
     void Start()

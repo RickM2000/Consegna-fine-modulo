@@ -6,8 +6,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
    [SerializeField] float speed = 5f;
-    Rigidbody rb;
-   
+   [SerializeField] float jumpHeigth = 5f;
+   [SerializeField] Rigidbody rb;
+   [SerializeField] LayerMask groundMask;
+
+    public int score = 0
+
+    bool isGrounded = false
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,27 +27,29 @@ public class PlayerController : MonoBehaviour
 
 
         //Costruisco il vettore movimento
-        Vector3 palyerMovement = (Vector3.right * xMove + Vector3.forward * zMove).normalized * spedd * Time.deltaTime;
+        Vector3 velocity = (Vector3.right * xMove + Vector3.forward * zMove).normalized * spedd * Time.deltaTime;
 
-            //tranform.position += palyerMovement;
+        //Applico la mia velocity verticale al vettore movimento 
+        velocity = rb.velocity.y;
+
+       
+
+        if (Input.GetButtonDown("Jump")) && isGrounded)
+        {
+            //  rb.AddForce(Vector3.up * jumpforce, ForceMode.Impulse);
+            velocity.y += Math.Sqrt(jumpHeigth * -2f * (-9.81f));
+        }
+
+        //applico il vettore movimento al rigibody
+        rb.velocity = velocity;
 
 
-            //Applico la transazione
-            //Transform.Translate(palyerMovement, Space.World);
-
-            rb.velocity = playerMoevement;
+       Debug.DrawRay(tranform.position, transform.forward * 10, Color.cyan);
+       if(Physics.Raycast(tranform.position, tranform.forward, 10, groundMask))
+        {
+            Debug.Log("Colpito");
+        }
     }
-
-    public string LogDay(int dayToLog)
-    {
-
-        
-        dayToLog = dayToLog + 1;
-
-        string massage Of
-
-    }
-
 
     private void FixedUpdate()
     {
@@ -50,25 +58,29 @@ public class PlayerController : MonoBehaviour
 
 
 
-
-
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(collision.transform.name);
+        if (other.transform.CompareTag("Collectible"))
+        {
+            score++;
+            Debug.Log(score)
+            Destroy(other.gameObject);
+        }
 
-     
+        if (other.transform.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+
+
+
     }
-
-
-    private void OnCollisionExit(Collision collision)
+    private void OnTriggerExit(Collider other)
     {
-        Debug.Log(collision.transform.name);
-
-
-    }
-
-    private void OnCollisionStay(Collision collision)
-    {
+        if(other.transform.CompareTag("Ground"))
+        {
+            isGrounded = false;
+        }
         
     }
 }

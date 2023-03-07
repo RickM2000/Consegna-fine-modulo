@@ -5,9 +5,13 @@ using UnityEngine;
 public class rotation : MonoBehaviour
 {
     float turnspeed = 100.0f;
-    float movespeed = 1.0f;
+    
+    public float threshold;
 
-
+    void FixedUpdate()
+     {
+        
+     }
     // Start is called before the first frame update
     void Start()
     {

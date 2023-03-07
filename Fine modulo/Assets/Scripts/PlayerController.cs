@@ -27,10 +27,10 @@ public class PlayerController : MonoBehaviour
     {
         //Polling input
       float xMove =  Input.GetAxis("Horizontal");
-        float zMove = Input.GetAxis("Vertical");
+        
 
         //costruisco il vettore movimento 
-        Vector3 velocity = (Vector3.right * xMove + Vector3.forward * zMove).normalized * speed;
+        Vector3 velocity = (Vector3.right * xMove  ).normalized * speed;
 
 
         //applico la mia velocity verticale 

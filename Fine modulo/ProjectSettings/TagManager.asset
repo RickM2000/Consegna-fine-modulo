@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - Ground
+  - gameObject
   layers:
   - Default
   - TransparentFX

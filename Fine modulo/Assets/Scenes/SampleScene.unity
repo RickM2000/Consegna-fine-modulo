@@ -420,7 +420,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25748
+  m_Name: pb_Mesh24656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -758,7 +758,6 @@ GameObject:
   - component: {fileID: 296727921}
   - component: {fileID: 296727920}
   - component: {fileID: 296727919}
-  - component: {fileID: 296727923}
   m_Layer: 5
   m_Name: Cube
   m_TagString: Untagged
@@ -847,20 +846,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &296727923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 296727918}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c31cac698fbd9f140a55f4a99793ee71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youWinText: {fileID: 1664971225}
-  delay: 3
 --- !u!1 &350857632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1737,7 +1722,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25726
+  m_Name: pb_Mesh24532
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1907,7 +1892,7 @@ GameObject:
   - component: {fileID: 781883819}
   - component: {fileID: 781883818}
   - component: {fileID: 781883817}
-  - component: {fileID: 781883816}
+  - component: {fileID: 781883821}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Player
@@ -1915,20 +1900,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &781883816
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781883815}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c31cac698fbd9f140a55f4a99793ee71, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  youWinText: {fileID: 1664971225}
-  delay: 5
 --- !u!65 &781883817
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2007,6 +1978,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &781883821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781883815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c31cac698fbd9f140a55f4a99793ee71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  youWinText: {fileID: 1664971225}
+  delay: 3
 --- !u!1 &786443307
 GameObject:
   m_ObjectHideFlags: 0
@@ -4854,7 +4839,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25796
+  m_Name: pb_Mesh24784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5468,7 +5453,7 @@ GameObject:
   - component: {fileID: 1775478275}
   m_Layer: 0
   m_Name: 'Carlo '
-  m_TagString: MainCamera
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6384,7 +6369,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25656
+  m_Name: pb_Mesh24422
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18390,7 +18375,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112972927}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dce59cfdac805d142962138dad9b1b54, type: 3}
@@ -18486,7 +18471,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2112972927}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!1001 &6846918176026602420
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18594,5 +18579,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6846918176022434504, guid: 747f9dbd1204419489311c17a6d477f3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 747f9dbd1204419489311c17a6d477f3, type: 3}

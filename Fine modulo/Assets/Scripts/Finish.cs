@@ -21,12 +21,14 @@ public class Finish : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
+            Debug.Log("Player");
             youWinText.SetActive(true);
             StartCoroutine(Countdown());
         }
     }
     IEnumerator Countdown()
     {
+        Debug.Log(delay);
         yield return new WaitForSeconds (delay);
         SceneManager.LoadScene(0);
     }

@@ -14,7 +14,7 @@ public class Respawn : MonoBehaviour
         if(transform.position.y < threshold)
         {
             transform.position = new Vector3(14.8f, 1.32f, 0f);
-        
+            SceneManager.LoadScene(1);
         }
 
      }
